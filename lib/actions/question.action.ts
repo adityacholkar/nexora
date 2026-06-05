@@ -1,16 +1,19 @@
 "use server";
 
 import mongoose, { FilterQuery, Types } from "mongoose";
+import { revalidatePath } from "next/cache";
 import { Session } from "next-auth"; // Add this import
 import { cache } from "react";
 
+import { auth } from "@/auth";
+import { Answer, Collection, Interaction, Vote } from "@/database";
 import Question, { IQuestionDoc } from "@/database/question.model";
 import TagQuestion from "@/database/tag-question.model";
 import Tag, { ITagDoc } from "@/database/tag.model";
-import { Answer, Collection, Interaction, Vote } from "@/database";
 
 import action from "../handlers/action";
 import handleError from "../handlers/error";
+import dbConnect from "../mongoose";
 import {
   AskQuestionSchema,
   DeleteQuestionSchema,
@@ -19,10 +22,8 @@ import {
   IncrementViewsSchema,
   PaginatedSearchParamsSchema,
 } from "../validations";
-import dbConnect from "../mongoose";
-import { revalidatePath } from "next/cache";
 import { createInteraction } from "./interaction.action";
-import { auth } from "@/auth";
+
 
 export async function createQuestion(
   params: CreateQuestionParams

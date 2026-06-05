@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 // import { after } from "next/server";
@@ -14,10 +15,9 @@ import Votes from "@/components/votes/Votes";
 import ROUTES from "@/constants/routes";
 import { getAnswers } from "@/lib/actions/answer.action";
 import { hasSavedQuestion } from "@/lib/actions/collection.action";
-import { getQuestion, incrementViews } from "@/lib/actions/question.action";
+import { getQuestion } from "@/lib/actions/question.action";
 import { hasVoted } from "@/lib/actions/vote.action";
 import { formatNumber, getTimeStamp } from "@/lib/utils";
-import { Metadata } from "next";
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
   const { id } = await params;

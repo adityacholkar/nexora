@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,10 +15,8 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { toast } from "@/hooks/use-toast";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { deleteQuestion } from "@/lib/actions/question.action";
 import { deleteAnswer } from "@/lib/actions/answer.action";
+import { deleteQuestion } from "@/lib/actions/question.action";
 
 interface Props {
   type: string;
@@ -51,7 +52,7 @@ const EditDeleteAction = ({ type, itemId }: Props) => {
 
   return (
     <div
-      className={`flex items-center justify-end gap-3 max-sm:w-full ${type === "Answer" && "gap-0 justify-center"}`}
+      className={`flex items-center justify-end gap-3 max-sm:w-full ${type === "Answer" && "justify-center gap-0"}`}
     >
       {type === "Question" && (
         <Image

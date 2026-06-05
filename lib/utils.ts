@@ -1,8 +1,8 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-import { techMap } from "@/constants/techMap";
 import { BADGE_CRITERIA } from "@/constants";
+import { techMap } from "@/constants/techMap";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

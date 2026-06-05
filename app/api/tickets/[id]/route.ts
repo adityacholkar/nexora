@@ -1,5 +1,6 @@
-import tickets from "@/app/database";
 import { NextResponse } from "next/server";
+
+import tickets from "@/app/database";
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
