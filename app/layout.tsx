@@ -21,9 +21,9 @@ const spaceGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DevFlow",
+  title: "Nexora",
   description:
-    "A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.",
+    "Nexora — the AI-powered developer knowledge community. Ask questions, share expertise, and get AI-enhanced answers. Collaborate with developers worldwide across web, mobile, algorithms, and more.",
   icons: {
     icon: "/images/site-logo.svg",
   },

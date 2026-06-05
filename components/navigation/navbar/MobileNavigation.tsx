@@ -30,7 +30,7 @@ const MobileNavigation = async () => {
           <Image src="/images/site-logo.svg" width={23} height={23} alt="Logo" />
 
           <p className="h2-bold font-space-grotesk text-dark-100 dark:text-light-900">
-            Dev<span className="text-primary-500">Flow</span>
+            Nex<span className="text-primary-500">ora</span>
           </p>
         </Link>
 
